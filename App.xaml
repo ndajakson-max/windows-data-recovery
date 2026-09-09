@@ -1,0 +1,33 @@
+<Application x:Class="WindowsDataRecovery.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="UI/MainWindow.xaml">
+    <Application.Resources>
+        <!-- Color Brushes -->
+        <SolidColorBrush x:Key="PrimaryBrush">#2196F3</SolidColorBrush>
+        <SolidColorBrush x:Key="SuccessBrush">#4CAF50</SolidColorBrush>
+        <SolidColorBrush x:Key="ErrorBrush">#F44336</SolidColorBrush>
+        <SolidColorBrush x:Key="WarningBrush">#FF9800</SolidColorBrush>
+        
+        <!-- Button Styles -->
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="1"
+                                CornerRadius="3"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Application.Resources>
+</Application>
